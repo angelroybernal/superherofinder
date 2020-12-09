@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: muyseguro
+      MYSQL_DATABASE: hero_data
+      MYSQL_USER: herofinder
+      MYSQL_PASSWORD: notanseguro
+    ports:
+      - 3306:3306
